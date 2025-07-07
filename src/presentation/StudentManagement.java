@@ -9,13 +9,11 @@ public class StudentManagement {
     Scanner sc = new Scanner(System.in);
     static ArrayList<Student> students = new ArrayList<>();
 
-    public void addStudent() {
+     public void addStudent() {
         Student student = new Student();
-        String name = student.inputName(sc);
-        int age = student.inputNumber(sc);
-        double avgScore = student.inputAvg(sc);
-        Student student1 = new Student(name, age, avgScore);
-        students.add(student1);
+        student.inputData(sc);
+        students.add(student);
+    
     }
     public void displayAllStudents() {
         if (students.isEmpty()) {
